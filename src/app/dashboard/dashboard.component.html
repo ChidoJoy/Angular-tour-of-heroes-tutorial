@@ -1,0 +1,13 @@
+<h2 class = "text-info ms-5">Top Heroes</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}" class="ms-3">
+    {{hero.name}}
+  </a>
+</div>
+<app-hero-search></app-hero-search>
+
+<ul class="list-group ms-2">
+  <li *ngFor="let hero of heroes" class="list-group-item ms-3">
+    <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+  </li>
+</ul>
